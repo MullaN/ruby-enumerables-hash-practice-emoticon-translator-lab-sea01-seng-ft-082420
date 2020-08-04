@@ -13,7 +13,6 @@ def get_japanese_emoticon(filepath, emoticon)
   match = library.find do |key,value|
     library[key][:english] == emoticon
   end
-  binding.pry
   match ? match[1][:japanese] : "Sorry, that emoticon was not found"
 end
 
