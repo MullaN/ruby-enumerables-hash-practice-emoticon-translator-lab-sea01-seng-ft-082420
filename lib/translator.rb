@@ -5,7 +5,7 @@ def load_library
   library = YAML.load_file("lib/emoticons.yml")
   binding.pry
   library.collect do |key, value|
-    key => {english: value[0], japanese: value[1]}
+    key = {english: value[0], japanese: value[1]}
   end
 end
 
