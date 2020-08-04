@@ -10,10 +10,10 @@ end
 
 def get_japanese_emoticon(filepath, emoticon)
   library = load_library(filepath)
-  match = library.find do 
+  match = library.find do
     |key,emoticon| library[key][:english] == emoticon}
   end
-  [:japanese]
+  match[:japanese]
 end
 
 def get_english_meaning
