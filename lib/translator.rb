@@ -10,7 +10,7 @@ end
 
 def get_japanese_emoticon(library, emoticon)
   library.find do |key, value|
-    library[key][:japanese] = emoticon
+    library[key][:japanese] == emoticon
   end
 end
 
