@@ -6,6 +6,7 @@ def load_library
   library = library.map do |key, value|
     key = {english: value[0], japanese: value[1]}
   end
+  library
 end
 
 def get_japanese_emoticon
