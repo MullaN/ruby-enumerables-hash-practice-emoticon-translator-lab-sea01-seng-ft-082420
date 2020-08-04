@@ -2,8 +2,8 @@ require 'yaml'
 require 'pry'
 
 def load_library
-  yaml_library = YAML.load_file("lib/emoticons.yml")
-  yaml_library.collect do |key, value|
+  library = YAML.load_file("lib/emoticons.yml")
+  library.collect do |key, value|
     {english: value[0], japanese: value[1]}
   end
   library
