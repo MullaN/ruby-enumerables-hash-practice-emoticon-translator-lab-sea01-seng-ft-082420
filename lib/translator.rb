@@ -13,8 +13,7 @@ def get_japanese_emoticon(filepath, emoticon)
   match = library.find do |key, value|
     library[key][:english] == emoticon
   end
-  binding.pry
-  #match[:japanese]
+  match[1][:japanese]
 end
 
 def get_english_meaning
