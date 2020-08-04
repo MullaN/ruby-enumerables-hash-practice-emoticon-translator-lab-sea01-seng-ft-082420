@@ -8,7 +8,8 @@ def load_library(filepath)
   library.to_h
 end
 
-def get_japanese_emoticon(library, emoticon)
+def get_japanese_emoticon(filepath, emoticon)
+  library = load_library(filepath)
   library.each do |key, value|
     library[key][:english] == emoticon
   end
