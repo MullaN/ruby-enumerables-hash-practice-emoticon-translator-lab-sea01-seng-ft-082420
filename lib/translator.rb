@@ -10,8 +10,9 @@ end
 
 def get_japanese_emoticon(library, emoticon)
   library.find do |key, value|
-    library[key][:japanese] == emoticon
+    library[key][:english] == emoticon
   end
+  binding.pry
 end
 
 def get_english_meaning
