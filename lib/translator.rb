@@ -8,8 +8,10 @@ def load_library
   library.to_h
 end
 
-def get_japanese_emoticon
-  library = load_library
+def get_japanese_emoticon(library, emoticon)
+  library.find do |key, value|
+    library[key][:japanese] = emoticon
+  end
 end
 
 def get_english_meaning
