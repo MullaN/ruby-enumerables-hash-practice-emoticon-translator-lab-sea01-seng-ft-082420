@@ -1,5 +1,4 @@
 require 'yaml'
-require 'pry'
 
 def load_library(filepath)
   library = YAML.load_file(filepath).collect do |key, value|
