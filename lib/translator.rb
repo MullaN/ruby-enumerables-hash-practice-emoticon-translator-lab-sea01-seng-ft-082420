@@ -4,10 +4,9 @@ require 'pry'
 def load_library
   library = YAML.load_file("lib/emoticons.yml")
   binding.pry
-  library = library.map do |key, value|
-    library[key] = {english: value[0], japanese: value[1]}
+  library.map do |key, value|
+    key => {english: value[0], japanese: value[1]}
   end
-  library
 end
 
 def get_japanese_emoticon
