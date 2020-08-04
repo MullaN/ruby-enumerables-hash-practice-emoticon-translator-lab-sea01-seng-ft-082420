@@ -7,6 +7,7 @@ def load_library
   library.collect do |key, value|
     binding.pry
     library[key] = {english: value[0], japanese: value[1]}
+    binding.pry
   end
 end
 
