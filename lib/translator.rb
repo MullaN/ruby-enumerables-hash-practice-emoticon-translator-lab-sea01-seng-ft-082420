@@ -16,6 +16,10 @@ def get_japanese_emoticon(filepath, emoticon)
   match ? match[1][:japanese] : "Sorry, that emoticon was not found"
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(filepath, emoticon)
+  library = load_library(filepath)
+  match = library.find do |key,value|
+    library[key][:english] == emoticon
+  end
+  match ? match[1][:japanese] : "Sorry, that emoticon was not found"
 end
