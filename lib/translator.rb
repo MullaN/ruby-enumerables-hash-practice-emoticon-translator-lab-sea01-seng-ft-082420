@@ -7,7 +7,6 @@ def load_library
     [k, {english: value[0], japanese: value[1]}]
   end
   library.to_h
-  library
 end
 
 def get_japanese_emoticon
