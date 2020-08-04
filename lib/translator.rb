@@ -6,6 +6,7 @@ def load_library
   library = yaml_library.collect do |key, value|
     yaml_library[key] = {english: value[0], japanese: value[1]}
   end
+  library
 end
 
 def get_japanese_emoticon
